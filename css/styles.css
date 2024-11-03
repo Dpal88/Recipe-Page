@@ -21,6 +21,16 @@
     --spacing-1600: 8rem;
 }
 
+@font-face {
+    font-family: 'Outfit';
+    src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -96,18 +106,26 @@ select {
   }
 }
 
-body, h2 {
+body,
+.prep-time h2 {
     font-family: "Outfit", sans-serif;
 }
-h1, h3 {
+h1,
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
     font-family: "Young Serif", serif;
 }
-h3 {
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
     color: var(--brown-800);
     font-size: 1.75rem;
     font-weight: 400;
     line-height: 100%;
 }
+
+/* -------- footer / attribution -------- */
 .attribution { 
     font-size: .85rem; 
     text-align: center;
@@ -179,7 +197,7 @@ header p {
 .prep-time:hover {
     transform: scale(1.05);
 }
-h2 {
+.prep-time h2 {
     color: var(--rose-800);
     font-size: 1.25rem;
     font-weight: 600;
