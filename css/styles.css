@@ -34,13 +34,172 @@ body {
 img {
     max-width: 100%;
 }
+h1, h2, h3 {
+    font-family: "Young Serif", serif;
+}
+h3 {
+    color: var(--brown-800);
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 100%;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
 
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    padding: var(--spacing-500) var(--spacing-400);
+}
 
+/* -------- header -------- */
+h1 {
+    color: var(--stone-900);
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 100%;
+}
+header p {
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 150%;
+    margin-top: var(--spacing-300);
+}
 
+/* -------- prep time -------- */
+.prep-time {
+    background: var(--rose-50);   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-300);
+    border-radius: var(--spacing-150);
+}
+h2 {
+    color: var(--rose-800);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 100%;
+}
+.prep-time ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    margin-top: var(--spacing-200);
+    padding-left: var(--spacing-300);
+}
+.prep-time ul li {
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 150%;
+    padding-left: var(--spacing-200);
+}
+.prep-time ul li span {
+    font-weight: 700;
+}
 
+/* -------- ingredients section -------- */
+.ingredients {
+    border-bottom: 1px solid var(--stone-150);
+    padding-bottom: var(--spacing-400);
+}
+.ingredients ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    margin-top: var(--spacing-300);
+    padding-left: var(--spacing-300);
+}
+.ingredients ul li {
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 150%;
+    padding-left: var(--spacing-200);
+}
+.ingredients ul li::marker {
+    color: var(--brown-800);
+}
 
+/* -------- instructions section -------- */
+.instructions {
+    border-bottom: 1px solid var(--stone-150);
+    padding-bottom: var(--spacing-400);
+}
+.instructions ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    margin-top: var(--spacing-300);
+    padding-left: var(--spacing-100);
 
+    list-style: none;
+    counter-reset: num;
+}
+.instructions ol li {
+    display: flex;
+    gap: var(--spacing-200);
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 150%;
 
+    counter-increment: num;
+}
+.instructions ol li::before {
+    content: counter(num) ". ";
+    color: var(--brown-800);
+    font-weight: 700;
+}
+.instructions ol li span {
+    font-weight: 700;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* -------- nutrition section -------- */
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+.nutrition p {
+    color: var(--stone-600);
+    font-size: 1rem;
+    line-height: 150%;
+}
+.nutrition table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+}
+.nutrition table tr {
+    display: flex;
+    gap: var(--spacing-200);
+    padding: 0 var(--spacing-400) var(--spacing-150);
+    border-bottom: 1px solid var(--stone-150);
+}
+.nutrition table tr:last-child {
+    padding: 0 var(--spacing-400);
+    border: none;
+}
+/* flex 1 0 0 */
+.nutrition table tr th {
+    color: var(--stone-600);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+
+    flex: 1 0 0;
+    text-align: start;
+}
+.nutrition table tr td {
+    color: var(--brown-800);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+
+    flex: 1 0 0;
+}
