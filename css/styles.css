@@ -21,19 +21,83 @@
     --spacing-1600: 8rem;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-* {
-    margin: 0;
-    padding: 0;
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body, h2 {
     font-family: "Outfit", sans-serif;
-}
-img {
-    max-width: 100%;
-    display: block;
 }
 h1, h3 {
     font-family: "Young Serif", serif;
@@ -134,9 +198,7 @@ h2 {
     line-height: 150%;
     padding-left: var(--spacing-200);
 }
-.prep-time ul li span {
-    font-weight: 700;
-}
+
 
 /* -------- ingredients section -------- */
 .ingredients {
@@ -170,27 +232,20 @@ h2 {
     flex-direction: column;
     gap: var(--spacing-100);
     margin-top: var(--spacing-300);
-    padding-left: var(--spacing-100);
-
-    list-style: none;
-    counter-reset: num;
+    padding-left: var(--spacing-300);
 }
 .instructions ol li {
-    display: flex;
-    gap: var(--spacing-200);
     color: var(--stone-600);
     font-size: 1rem;
     line-height: 150%;
-
-    counter-increment: num;
 }
-.instructions ol li::before {
-    content: counter(num) ". ";
+
+.instructions ol li::marker {
     color: var(--brown-800);
     font-weight: 700;
 }
-.instructions ol li span {
-    font-weight: 700;
+.instructions ol li div {
+    margin-left: var(--spacing-200);
 }
 
 /* -------- nutrition section -------- */
