@@ -1,6 +1,39 @@
+:root {
+    --white: #fff;
 
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
 
+    --brown-800: hsl(14, 45%, 36%);
 
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --spacing-100: .5rem;
+    --spacing-150: .75rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-600: 3rem;
+    --spacing-1600: 8rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Outfit", sans-serif;
+}
+img {
+    max-width: 100%;
+}
 
 
 
