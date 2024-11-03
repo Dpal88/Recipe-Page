@@ -107,6 +107,11 @@ header p {
     align-items: flex-start;
     padding: var(--spacing-300);
     border-radius: var(--spacing-150);
+
+    transition: transform .3s ease-in-out;
+}
+.prep-time:hover {
+    transform: scale(1.05);
 }
 h2 {
     color: var(--rose-800);
