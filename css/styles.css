@@ -216,7 +216,9 @@ header p {
     line-height: 150%;
     padding-left: var(--spacing-200);
 }
-
+.prep-time ul li::marker {
+    color: var(--rose-800);
+}
 
 /* -------- ingredients section -------- */
 .ingredients {
